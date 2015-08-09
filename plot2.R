@@ -18,10 +18,10 @@ plot2 <- function () {
     
     fdates <- 
         strptime (paste(consdata$Date,consdata$Time), 
-                  format= "%m/%d/%Y %H:%M:%S")
+                  format= "%d/%m/%Y %H:%M:%S")
     
     plot (fdates, consdata$Global_active_power, 
-          ylab="Global Active Power (kilowatts)", xlab="", pch = "|")
+          ylab="Global Active Power (kilowatts)", xlab="", type="l")
 
     dev.copy (png, file = "plot2.png", width = 480, height = 480)
     dev.off()
